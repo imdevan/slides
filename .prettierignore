@@ -1,0 +1,9 @@
+**/*
+!index.html
+
+node_modules
+dist
+bun.lock
+package-lock.json
+*.min.js
+*.min.css

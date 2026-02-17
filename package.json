@@ -10,7 +10,9 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "author": {
     "name": "Hakim El Hattab",
@@ -52,10 +54,11 @@
     "highlight.js": "^11.9.0",
     "marked": "^4.3.0",
     "node-qunit-puppeteer": "^2.2.0",
-    "through2": "^4.0.2",
+    "prettier": "^3.8.1",
     "qunit": "^2.22.0",
     "rollup": "^4.1.5",
     "sass": "^1.79.4",
+    "through2": "^4.0.2",
     "yargs": "^17.7.2"
   },
   "overrides": {
