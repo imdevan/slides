@@ -21,31 +21,6 @@ jobs:
       - name: Deploy to slides repo
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: imdevan/slides
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: deploy
-
-  deploy-notes:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Run build-notes
-        run: npx tsx build-notes.ts
-
-      - name: Prepare notes
-        run: |
-          mkdir -p deploy-notes
-          cp notes/index.html deploy-notes/
-          cp -r notes/dist deploy-notes/
-          cp -r notes/plugin deploy-notes/
-          cp -r notes/assets deploy-notes/
-
-      - name: Deploy to d4js-notes repo
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: imdevan/d4js-notes
-          publish_branch: gh-pages
-          publish_dir: deploy-notes
