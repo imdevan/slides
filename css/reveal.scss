@@ -8,10 +8,93 @@
 
 @use "sass:math";
 @import 'layout';
+@import 'mixins';
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+
+* {
+   font-family: 'FiraCode Nerd Font', monospace;
+
+   font-variant-ligatures: contextual;
+     font-feature-settings: "calt" 1;
+
+}
+
+.relative {
+  position: relative;
+}
+
+.abs-center {
+  position: fixed;
+  left: 50%;
+  // top: 50%;
+  height: 800px !important;
+  width: auto;
+  max-height: 800px !important;
+  max-width: 100vw !important;
+  transform: translate(-50%, -20%);
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: white !important;
+}
+
+.fragment.hide-inline {
+  display: none;
+}
+.fragment.hide-inline.visible {
+  display: inline-block;
+  animation: fadeInAfterDisplay 0.3s ease 0.05s both;
+}
+
+.fragment.hide-block {
+  display: none;
+}
+.fragment.hide-block.visible {
+  display: block;
+  animation: fadeInAfterDisplay 0.3s ease 0.05s both;
+}
+@keyframes fadeInAfterDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.fragment.green {
+  text-color: white;
+}
+.fragment.green.visible {
+  text-color: #B7E4C7;
+}
+
+.fragment.blur {
+  filter: blur(5px);
+}
+.fragment.blur.visible {
+  filter: none;
+}
+
+.fragment.flash {
+  display: none;
+  opacity: 0;
+}
+.fragment.flash.visible {
+  display: block;
+  @include flash-animation(2.69s, 0.3s);
+}
+
+.fragment.reverse {
+  // display: inherit !important;
+}
+.fragment.reverse.visible {
+  display: none !important;
+}
 
 html.reveal-full-page {
 	width: 100%;
@@ -21,9 +104,11 @@ html.reveal-full-page {
 	height: 100dvh;
 	overflow: hidden;
 }
-
+a:hover {
+  text-decoration: underline !important;
+}
 .reveal-viewport {
-  cursor: none;
+  // cursor: none;
 	height: 100%;
 	overflow: hidden;
 	position: relative;

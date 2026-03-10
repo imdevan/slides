@@ -27,12 +27,12 @@ $headingColor: #fff;
 
 $mainFontSize: 42px;
 // $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-// $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
-$headingFontWeight: 600;
-$linkColor: #B24BF3;
+$headingTextTransform: none;
+// $headingFontWeight: 600;
+// $linkColor: #B24BF3;
 $linkColorHover: color.scale( $linkColor, $lightness: 15% );
 $selectionBackgroundColor: color.scale( $linkColor, $lightness: 25% );
 

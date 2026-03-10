@@ -1,0 +1,28 @@
+// Flash animation mixin
+// Allows separate control of transition and visible durations
+// @param $visible-duration - How long the element stays at full opacity (default: 3s)
+// @param $transition-duration - How long fade in/out takes (default: 0.3s)
+@mixin flash-animation($visible-duration: 3s, $transition-duration: 0.3s) {
+  $total-duration: $visible-duration + ($transition-duration * 2);
+  
+  // Calculate percentages for keyframes
+  $fade-in-percent: ($transition-duration / $total-duration) * 100%;
+  $fade-out-start-percent: 100% - (($transition-duration / $total-duration) * 100%);
+  
+  animation: flashEffect #{$total-duration} ease both;
+  
+  @keyframes flashEffect {
+    0% {
+      opacity: 0;
+    }
+    #{$fade-in-percent} {
+      opacity: 1;
+    }
+    #{$fade-out-start-percent} {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
