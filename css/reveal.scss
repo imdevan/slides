@@ -291,7 +291,8 @@ a:hover {
 		color: #ff2c2d
 	}
 	.reveal .fragment.highlight-green.visible {
-		color: #17ff2e;
+  color: #a6da95 !important;
+;
 	}
 	.reveal .fragment.highlight-blue.visible {
 		color: #1b91ff;
@@ -300,8 +301,9 @@ a:hover {
 .reveal .fragment.highlight-current-red.current-fragment {
 	color: #ff2c2d
 }
+.reveal a.fragment.highlight-current-green.current-fragment,
 .reveal .fragment.highlight-current-green.current-fragment {
-	color: #17ff2e;
+  color: #a6da95 !important;
 }
 .reveal .fragment.highlight-current-blue.current-fragment {
 	color: #1b91ff;

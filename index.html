@@ -42,10 +42,8 @@
           </footer>
           <aside class="notes">
             <ul>
-              <li>intro</li>
-              <li>burn out</li>
-              <li>finding joy in having control over env</li>
-              <li>just need a place to vent lol</li>
+              <li>smile</li>
+              <li>remember to breathe</li>
             </ul>
           </aside>
         </section>
@@ -60,7 +58,8 @@
 
           <aside class="notes">
             <ul>
-              <li>freelance something</li>
+              <li>freelancing: 6 years</li>
+              <li></li>
               <li>learned c++ on notepad++</li>
               <li>js since 2013</li>
               <li>ts since 2020</li>
@@ -69,6 +68,7 @@
               >
               ^ could merit it's own slide
             </ul>
+            <ul><li>I have strong feelings about my development environment and wanted to talk about it</li></ul>
           </aside>
         </section>
 
@@ -79,28 +79,32 @@
             <li>Interrupt if you have quesitons or corrections<skpan class="fragment custom hide-inline">&nbsp(subject to change)</span></li>
             <li
               >All references are linked in presentation (at
-              <a class="green" href="https//devan.gg/slides"><span class="green">devan.gg/slides</span></a>)</li
+              <a class="green" href="https://devan.gg/slides"><span class="green">devan.gg/slides</span></a>)</li
             >
           </ul>
 
           <aside class="notes">
             <ul>
-              <li>I may change that rule for time if needed</li>
-              <li>
-                A little about my journey:
-                <ul>
-                  <li> 9ish years of professional dev. 12ish total </li>
-                  <li>started with notepad++ -> sublime -> vscode</li>
-                  <li>been a vscode andy for most of my carreer</li>
-                  <li>been primary js my entire career</li>
-                </ul>
-              </li>
+              <li>not highlighted</li>
+              <li>but it's probably a link</li>
+              <li>if broken let me know</li>
+              <li>dotfiles are simple</li>
+              <li>dotfiles can be very deep and intricate</li>
+              <br>
+              <li>if you are beginer: please take what is helpful</li>
+              <li>if you are and advanced user</li>
+              <li>take scrore, in your head</li>
+              <li>don't tell anyone your score but do talk to me after about your set up ... i'd probably love to hear about it</li>
+              <br>
+              <li>most of this talk applies to mac and linux users</li>
+              <li>windows: use wsl</li>
+              <li>if you're a windows user and not using wsl, idk sorry</li>
             </ul>
           </aside>
         </section>
 
         <section>
-          <p>[ breathing room ]</p>
+          <p>[ reminder to breathe ]</p>
         </section>
 
         <section class="left">
@@ -139,65 +143,99 @@
           </aside>
         </section>
 
-        <section style="transform: translateY(-200px)">
+        <!-- <section style="transform: translateY(-200px)">
+          <!-- <p>Why are dotfiles?</p>
+          
+<!-- <ul>
+            <!-- <li class="fragment" data-fragment-index="1">
+              <!-- tools
+              <!-- <ul class="fragment custom hide-block" data-fragment-index="3">
+                <!-- <li>dev tools and applications</li>
+              <!-- </ul>
+            <!-- </li>
+            <!-- <li class="fragment" data-fragment-index="1"
+              <!-- >system backup
+              <!-- <ul class="fragment custom hide-block" data-fragment-index="4">
+                <!-- <li>how your environment recreates itself</li>
+              <!-- </ul>
+            <!-- </li>
+            <!-- <li class="fragment" data-fragment-index="5"
+              <!-- >scripts
+              <!-- <ul class="fragment custom hide-block" data-fragment-index="6">
+                <!-- <li
+                  <!-- >aliases
+                  <!-- <ul
+                    <!-- class="fragment custom hide-block"
+                    <!-- data-fragment-index="7"
+                  <!-- >
+                    <!-- <li>action</li>
+                    <!-- <li>bookmark</li>
+                  <!-- </ul>
+                <!-- </li>
+                <!-- <li>functions</li>
+              <!-- </ul>
+            <!-- </li>
+          <!-- </ul>
+          <!-- <aside class="notes">
+            <!-- <ul>
+              <!-- <li>more obvious</li>
+              <!-- <li>Bring your environment with you</li>
+              <!-- <li>Keep your environment organized</li>
+              <!-- <li>
+                <!-- a lot of poeple's dot files look almost like a copy of their
+                <!-- home dir with just their config files.
+              <!-- </li>
+              <!-- <li>
+                <!-- mine may look slightly different, but really everyone's dot
+                <!-- files look different they are like snowflakes and it is
+                <!-- intersting seeing what people prioritize
+              <!-- </li>
+              <!-- <li>less obvious</li>
+            <!-- </ul>
+          <!-- </aside>
+        <!-- </section> -->
+
+      <section>
           <p>Why are dotfiles?</p>
+
+          <ul class="fragment">
+            <li>
+              organization
+            </li>
+            <li>
+              portability
+            </li>
+            <li>
+              recovery
+            </li>
+            <li>
+              documentation
+            </li>
+            <li>
+              artifact of craft
+            </li>
+          </ul>
+        </section>
+
+        <section style="">
+          <p>What are in dotfiles?</p>
           <ul>
             <li class="fragment" data-fragment-index="1">
               configs
-              <ul class="fragment custom hide-block" data-fragment-index="2">
-                <li>tool settings</li>
-                <li>system settings</li>
-                <li>app settings</li>
-              </ul>
             </li>
             <li class="fragment" data-fragment-index="1">
               tools
-              <ul class="fragment custom hide-block" data-fragment-index="3">
-                <li>dev tools and applications</li>
-              </ul>
             </li>
             <li class="fragment" data-fragment-index="1"
               >system backup
-              <ul class="fragment custom hide-block" data-fragment-index="4">
-                <li>how your environment recreates itself</li>
-              </ul>
             </li>
-            <li class="fragment" data-fragment-index="5"
+            <li class="fragment" data-fragment-index="1"
               >scripts
-              <ul class="fragment custom hide-block" data-fragment-index="6">
-                <li
-                  >aliases
-                  <ul
-                    class="fragment custom hide-block"
-                    data-fragment-index="7"
-                  >
-                    <li>action</li>
-                    <li>bookmark</li>
-                  </ul>
-                </li>
-                <li>functions</li>
-              </ul>
             </li>
           </ul>
-
-          <aside class="notes">
-            <ul>
-              <li>more obvious</li>
-              <li>Bring your environment with you</li>
-              <li>Keep your environment organized</li>
-              <li>
-                a lot of poeple's dot files look almost like a copy of their
-                home dir with just their config files.
-              </li>
-              <li>
-                mine may look slightly different, but really everyone's dot
-                files look different they are like snowflakes and it is
-                intersting seeing what people prioritize
-              </li>
-              <li>less obvious</li>
-            </ul>
-          </aside>
         </section>
+
+        
 
         <section class="center">
           <img
@@ -256,7 +294,7 @@
         <section>
           <p
             ><span class="fragment custom hide-inline" data-fragment-index="1"
-              >What's in a&nbsp;</span
+              >What is a&nbsp;</span
             >shell<span
               class="fragment custom hide-inline"
               data-fragment-index="1"
@@ -267,8 +305,11 @@
           <aside class="notes">
             <ul>
               <li>the rug that ties the room together</li>
+              <li>an application to directly interact with teh os and other tools</li>
+              <br>
               <li>ask: who knows what shell they use (expect everyone)</li>
               <li>zsh users?</li>
+              <br>
               <li>zsh users who use oh my zsh?</li>
               <li>curiosity: users of other shells</li>
             </ul>
@@ -283,7 +324,9 @@
 
           <aside class="notes">
             <ul>
-              <li>I'm goin gto be focusing on zsh for this presentation</li>
+              <li>I'm going to be focusing on zsh for this presentation</li>
+              <li>zsh (not ohmy) is default since mac Catalina in 2019</li>
+              <li>Oh My Zsh was created by Robby Russell and first released in 2009</li>
             </ul>
           </aside>
         </section>
@@ -300,6 +343,15 @@
           >
             ~ wikipedia
           </a>
+
+          <aside class="notes">
+
+            <ul>
+              <li>
+                1990 by Paul Falstad while a student at Princeton
+              </li>
+            </ul>
+          </aside>
         </section>
 
         <section>
@@ -342,17 +394,21 @@
                 is designed as a completely free software alternative for the
                 Bourne shell, sh, and other proprietary Unix shells
               </li>
-              <li>borne shell: 1973</li>
-              <li>thomson shell: 1970</li>
+              <br>
+              <li>bourne shell: 1979</li>
+              <li>thomson shell: 1971 (simple command interpreter)</li>
               <li>zsh is infact: a combo of KornShell ksh and tenex c shell</li>
               <li>
                 bourne shell The Bourne shell (sh) is a foundational Unix
                 command-line interpreter and scripting language developed by
                 Stephen Bourne at Bell Labs in 1979.
               </li>
-              <li>fish shell: 2005</li>
+              <br>
+              <li>fish shell: 2005 w/ substantial updates over the years</li>
               <li>nu shell: 2019</li>
               <li>you don't have to chose one</li>
+              <br>
+              <li></li>
             </ul>
           </aside>
         </section>
@@ -387,7 +443,7 @@
                     >NVM</a
                   >
                   <ul>
-                    <li>lazyload for faster startup</li>
+                    <li class='fragment'>lazyload for faster startup</li>
                   </ul>
                 </li>
               </ul>
@@ -424,8 +480,21 @@
         >
 
         <section>
-          <p>Why stay with zsh?</p>
-          <p class="fragment">I'm already invested</p>
+          <p>
+            Trying different shells
+          </p>
+
+          <aslide class="notes">
+
+            <ul>
+              <li>
+                running nested shells
+              </li>
+              <li>
+                inline script execution / shell one-liner
+              </li>
+            </ul>
+          </aslide>
         </section>
 
         <section class="relative">
@@ -453,9 +522,9 @@
             <li class="fragment custom reverse" data-fragment-index="4">
               Manual sym link managment
             </li>
-            <li class="fragment highlight-green"><a href=""></a>GNU stow</li>
-            <li><a href=""></a>Nix</li>
-            <li><a href=""></a>Chezmoi</li>
+            <li ><a class="fragment highlight-green" href="https://www.gnu.org/software/stow/">GNU stow</a></li>
+            <li><a href="https://nixos.org/">Nix</a></li>
+            <li><a href="https://www.chezmoi.io/#should-i-use-chezmoi">Chezmoi</a></li>
             <li><a href="https://github.com/anishathalye/dotbot">dotdot</a></li>
           </ul>
         </section>
@@ -474,11 +543,9 @@
           <aside class="notes">
             <ul>
               <li>GNU's not Unix</li>
-              <li>fill in</li>
-              <li>"new library" came out in ____</li>
-              <li>why use gnu stow?</li>
-              <li>share configs across computers</li>
-              <li>save hours of time and lookups by reusing configs</li>
+              <li>GNU started in 1983 by Richard Stallman</li>
+              <li>bash was created in 1989 for gnu by Brian Fox</li>
+              <li>1993, created by Bob Glickstein</li>
             </ul>
           </aside>
         </section>
@@ -494,6 +561,8 @@
             </ul>
           </aside>
         </section>
+
+        <section><p>scripts</p></section>
 
         <section>
           <p>Aliases</p>
@@ -558,6 +627,8 @@
               <li>push_current_branch</li>
               <li>scripts</li>
               <li>jobbies</li>
+              <br>
+              <li>command_not_found</li>
               <li>new function?</li>
             </ul>
           </aside>
@@ -645,15 +716,19 @@
           <p>[ extension example ]</p>
         </section>
 
-        <section>Modern Distributions</section>
-
         <section>
-          <img src="assets/lazyvim.png" style="margin: auto" />
-        </section>
+          <p>Modern Distributions</p>
+          
+          <ul class="fragment">
+            <li><a href="https://neovim.io/">NeoVim</a></li>
+                        <li>
+              <a  href="https://www.lazyvim.org/">LazyVim</a>
+            </li>
 
-        <section>
-          <p>LazyVim Alternatives:</p>
-          <ul>
+            <li>
+              <a  href="https://www.lazyvim.org/">LazyVim</a>
+            </li>
+
             <li>
               <a href="https://nvchad.com/"> NvChad </a>
             </li>
@@ -667,11 +742,22 @@
             </li>
           </ul>
 
-          <aside class="notes">
+          <aslide class="notes">
+          <ul>
+            <li>Neovim was first released in 2014 Thiago de Arruda (brazilan develloper)</li>
+          </ul>
+
             <ul>
-              <li>LazyVim release date ____</li>
+              <li>
+                lazyvim created 2023 by
+                 (Folke Lemaitre), a prolific Neovim plugin developer 
+              </li>
             </ul>
-          </aside>
+          </aslide>
+        </section>
+
+        <section>
+          <img src="assets/lazyvim.png" style="margin: auto" />
         </section>
 
         <section>
@@ -705,8 +791,26 @@
           <img src="assets/sickos.jpg" />
         </section>
 
+        <section>
+          <p>Appendex 0:</p>
+          <p>Notable Github Repo's</p>
+          <ul><li><a href="https://github.com/mathiasbynens/dotfiles">@mathiasbynens</a>
+          <ul><li class="fragment">
+              <a href="https://github.com/mathiasbynens/dotfiles/blob/b7c7894e7bb2de5d60bfb9a2f5e46d01a61300ea/.macos#L157">.macos</a>
+            </li></ul></li>
+            <li>             
+              <a href="https://github.com/holman/dotfiles">@holman</a> 
+            </li>
+            <li>             
+              <a href="https://github.com/lewagon/dotfiles">@lewagon</a> 
+            </li>
+          </ul>
+        </section>
+
         <section class="left">
           <p>Appendix A:</p>
+          <p>My dotfiles:</p>
+
           <ul>
             <li>
               <a href="https://dotfiles.github.io/">simple dotfiles example</a>
@@ -723,11 +827,16 @@
         <section>
           <p>Appendix B:</p>
           <p>Additional Reading:</p>
+
           <ul>
             <li>
               <a href="https://dotfiles.github.io/">
                 github dotfiles documentation
               </a>
+            </li>
+
+            <li>         
+              <a href="https://terminaltrove.com/explore/">terminaltrove</a>
             </li>
           </ul>
         </section>
@@ -747,7 +856,8 @@
               >
               <ul>
                 <li
-                  >lazydocker + colima = fully terminal contained docker
+                  
+                  >lazydocker + <a href="https://colima.run/docs/installation/">colima</a> = fully terminal contained docker
                   containers</li
                 >
               </ul></li
@@ -825,6 +935,8 @@
               <a href="https://devan.gg/go-cli-template"> go-cli-template </a>
             </li>
             <li> <a href="https://devan.gg/what-is-pypo/">PyPo</a> </li>
+            <li> <a href="https://devan.gg">devan.gg</a> </li>
+
             <li>
               <p class="green">@dev__the__dev</p>
             </li>
