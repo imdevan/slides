@@ -1,21 +1,8 @@
 import { watch } from "fs";
-import { join, extname } from "path";
+import { join } from "path";
 import { parseNotes, buildInjection } from "./parse-notes.ts";
 
-const PORT = 8001;
 const ROOT = process.cwd();
-
-const MIME: Record<string, string> = {
-  ".html": "text/html",
-  ".css": "text/css",
-  ".js": "application/javascript",
-  ".json": "application/json",
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".svg": "image/svg+xml",
-  ".woff": "font/woff",
-  ".woff2": "font/woff2",
-};
 
 async function generate() {
   const sourceHtml = await Bun.file("index.html").text();
@@ -37,26 +24,14 @@ watch("index.html", async () => {
   await generate();
 });
 
-Bun.serve({
-  port: PORT,
-  async fetch(req) {
-    const url = new URL(req.url);
-    let pathname = url.pathname;
-    if (pathname === "/" || pathname === "") pathname = "/notes/index.html";
-
-    const filepath = join(ROOT, pathname);
-    const file = Bun.file(filepath);
-
-    if (await file.exists()) {
-      const ext = extname(filepath);
-      return new Response(file, {
-        headers: { "Content-Type": MIME[ext] ?? "application/octet-stream" },
-      });
-    }
-
-    return new Response("Not found", { status: 404 });
-  },
+// Start the notes gulp serve (has livereload built in)
+const proc = Bun.spawn(["./node_modules/.bin/gulp", "serve", "--port", "8080"], {
+  cwd: join(ROOT, "notes"),
+  stdout: "inherit",
+  stderr: "inherit",
 });
 
-console.log(`Notes server: http://localhost:${PORT}/notes/`);
 console.log("Watching index.html for changes...");
+
+process.on("exit", () => proc.kill());
+process.on("SIGINT", () => { proc.kill(); process.exit(); });
