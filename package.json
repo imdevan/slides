@@ -12,7 +12,9 @@
     "start": "gulp serve",
     "build": "gulp build",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "generate-notes": "bun generate-notes.ts",
+    "dev-notes": "bun dev-notes.ts"
   },
   "author": {
     "name": "Hakim El Hattab",
