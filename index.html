@@ -85,7 +85,7 @@
 
           <aside class="notes">
             <ul>
-              <li>not highlighted</li>
+              <li>links not highlighted</li>
               <li>but it's probably a link</li>
               <li>if broken let me know</li>
               <li>dotfiles are simple</li>
@@ -99,12 +99,20 @@
               <li>most of this talk applies to mac and linux users</li>
               <li>windows: use wsl</li>
               <li>if you're a windows user and not using wsl, idk sorry</li>
+              <li>poll room: windows, mac, linux</li>
+              <li>poll room on dotfiles</li>
+              <li>i feel like most people are 1 of 2</li>
             </ul>
           </aside>
         </section>
 
         <section>
           <p>[ reminder to breathe ]</p>
+          <aslide class="notes">
+            <ul>
+              <li>invite audience to take a breathe</li>
+            </ul>
+          </aslide>
         </section>
 
         <section class="left">
@@ -126,18 +134,7 @@
           </aside>
         </section>
 
-        <section>
-          <p>[ dotfiles example ]</p>
-
-          <aside class="notes">
-            <ul>
-              <li>notable examples:</li>
-              <li>.zshrc</li>
-              <li>.opencode</li>
-              <li>show simple example</li>
-            </ul>
-          </aside>
-        </section>
+        
 
       <section>
           <p>Why are dotfiles?</p>
@@ -185,7 +182,18 @@
           </ul>
         </section>
 
-        
+        <section>
+          <p>[ dotfiles example ]</p>
+
+          <aside class="notes">
+            <ul>
+              <li>notable examples:</li>
+              <li>.zshrc</li>
+              <li>.opencode</li>
+              <li>show simple example</li>
+            </ul>
+          </aside>
+        </section>
 
         <section class="center">
           <img
@@ -228,7 +236,10 @@
           </ul>
           <aside class="notes">
             <ul>
-              <li>doesn't matter when one you use</li>
+              <li>doesn't matter which one you use</li>
+              <li>iterm2 works fine until you get really into using terminal for stuff</li>
+              <li>ghostty is cool and hawt right now</li>
+              <br>
               <li>
                 i like wezterm on mac because it is fast and plays well with
                 emojis
@@ -255,13 +266,15 @@
           <aside class="notes">
             <ul>
               <li>the rug that ties the room together</li>
-              <li>an application to directly interact with teh os and other tools</li>
+              <li>an application to directly interact with the os and other tools</li>
               <br>
               <li>ask: who knows what shell they use (expect everyone)</li>
               <li>zsh users?</li>
               <br>
               <li>zsh users who use oh my zsh?</li>
               <li>curiosity: users of other shells</li>
+              <br>
+              <li>if everyone ohmyzsh users ask how many manager there plugins and deps</li>
             </ul>
           </aside>
         </section>
@@ -441,10 +454,15 @@
                 running nested shells
               </li>
               <li>
-                inline script execution / shell one-liner
+                inline script execution (one liner)
               </li>
             </ul>
           </aslide>
+        </section>
+
+        <section>
+
+          <p>[ nested shells example ]</p>
         </section>
 
         <section class="relative">
@@ -512,6 +530,10 @@
           </aside>
         </section>
 
+        <section>
+          <p>[ let's look at some dotfiles ]</p>
+        </section>
+
         <section><p>scripts</p></section>
 
         <section>
@@ -554,14 +576,16 @@
 
         <section>
           <p>Function Syntax pt 2</p>
-          <pre class="code">
-            if [[$# -eq 0]]; then
-              echo "No args passed"
-            elif [ -n "$1" ]; then
-              echo "The first argument is NOT empty: $1"
-            else
-              echo "All args $@"
-            fi
+          <pre class="code bash">
+            function foo() {
+              if [[$# -eq 0]]; then
+                echo "No args passed"
+              elif [ -n "$1" ]; then
+                echo "The first argument is NOT empty: $1"
+              else
+                echo "All args $@"
+              fi
+            }
           </pre>
         </section>
 
@@ -619,25 +643,6 @@
         </section>
 
         <section>
-          <p>Okay But Why Is Vim So Great?</p>
-          <ul class="fragment custom hide-inline">
-            <li>Vim Motions</li>
-            <li class="fragment">Control</li>
-            <li class="fragment">Vim Motions</li>
-          </ul>
-          <aside class="notes">
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <p>[ vim example ]</p>
-        </section>
-
-        <section>
           <p>But Vim is Scary!</p>
         </section>
 
@@ -662,9 +667,6 @@
           
           <ul class="fragment">
             <li><a href="https://neovim.io/">NeoVim</a></li>
-                        <li>
-              <a  href="https://www.lazyvim.org/">LazyVim</a>
-            </li>
 
             <li>
               <a  href="https://www.lazyvim.org/">LazyVim</a>
@@ -679,11 +681,10 @@
             </li>
 
             <li>
-              <a href="https://neovim.io/">Raw Dog Neovim</a>
+              <a href="https://neovim.io/">Neovim</a>
             </li>
           </ul>
-
-          <aslide class="notes">
+          <aside class="notes">
           <ul>
             <li>Neovim was first released in 2014 Thiago de Arruda (brazilan develloper)</li>
           </ul>
@@ -694,7 +695,7 @@
                  (Folke Lemaitre), a prolific Neovim plugin developer 
               </li>
             </ul>
-          </aslide>
+          </aside>
         </section>
 
         <section>

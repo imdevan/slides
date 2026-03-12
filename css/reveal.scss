@@ -86,7 +86,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 .fragment.flash.visible {
   display: block;
-  @include flash-animation(2.69s, 0.3s);
+  @include flash-animation(1.69s, 0.3s);
 }
 
 .fragment.reverse {
